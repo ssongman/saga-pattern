@@ -797,9 +797,9 @@ $ helm -n redis-system delete my-release
 
 
 
-## 2) Internal Access
+## 2) External Access
 
-redis client를 cluster 내부에서 실행후 접근하는 방법을 알아보자.
+redis client를 cluster 외부에서 실행후 접근하는 방법을 알아보자.
 
 ### (1) Redis client 확인
 
@@ -815,7 +815,12 @@ $ docker run --name redis-client -d --rm --user root docker.io/bitnami/redis-clu
 $ docker exec -it redis-client bash
 
 ## Local PC IP로 cluster mode 접근
-$ redis-cli -h 192.168.31.1 -c -a new1234 -p 32200
+$ redis-cli -h 211.254.212.105 -c -a new1234 -p 32200
+
+
+
+# KT Cloud 에서는 Virtual Router IP
+
 
 
 
@@ -863,7 +868,7 @@ P3X Web UI 를 kubernetes 에 설치해 보자.
 아래 yaml  manifest file을 활용하여 configmap, deployment, service, ingress 를 일괄 실행한다.
 
 ```sh
-$ cd ~/githubrepo/ktds-edu2
+$ cd ~/song/del
 
 
 $ cat ./redis/redisui/11.p3xredisui.yaml

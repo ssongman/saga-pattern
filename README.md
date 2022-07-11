@@ -44,7 +44,7 @@
 
   
 
-## 3) Redis on KT Cloud
+## 2) Redis on KT Cloud
 
 - helm install
 - Redis Cluster / Redis Install
