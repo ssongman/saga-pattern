@@ -61,11 +61,11 @@ Orchestration-Based Saga 패턴은 트랜잭션 처리를 위해 Saga 인스턴�
 
 
 
-## 1) 성공 시나리오
+## 1.1 성공 시나리오
 
 
 
-### (1) participant 설명
+### 1) participant 설명
 
 - SagaDB
   - mysql
@@ -88,7 +88,7 @@ Orchestration-Based Saga 패턴은 트랜잭션 처리를 위해 Saga 인스턴�
 
 
 
-### (2) Sequence Diagram
+### 2) Sequence Diagram
 
 - Application A1, A2, A3 모두 Insert  처리되는 상황
 
@@ -150,7 +150,7 @@ sequenceDiagram
 
 
 
-### (3) Step 별 설명
+### 3) Step 별 설명
 
 1. Saga Transaction Start
 
@@ -228,11 +228,11 @@ sequenceDiagram
 
 
 
-## 2) 보상  시나리오
+## 1.2 보상  시나리오
 
 
 
-### (1) Sequence Diagram
+### 1) Sequence Diagram
 
 - Application A1, A2 은 성공,  A3 에서 실패되는 시나리오
 
@@ -319,7 +319,7 @@ sequenceDiagram
 
 
 
-### (2) Step 별 설명
+### 2) Step 별 설명
 
 1. Saga Transaction Start
 2. 성공 시나리오와 동일
@@ -373,7 +373,7 @@ Saga Manager 는 일반 RDB(Mysql 등) 를 통해 관리한다.
 
 
 
-## 1) Saga Manager ER
+## 1.1 Saga Manager ER
 
 ```mermaid
 classDiagram
@@ -408,9 +408,9 @@ SagaManagerSlave : +Datetime Updt
 
 
 
-## 2) Structure
+## 1.2 Structure
 
-### (1) SagaManager Master
+### 1) SagaManager Master
 
 | SagaId         | SvcName | StartTime        | EndTime          | SagaStatus | Crdt                 | Updt                 |
 | -------------- | ------- | ---------------- | ---------------- | ---------- | -------------------- | -------------------- |
@@ -432,7 +432,7 @@ SagaManagerSlave : +Datetime Updt
 
 
 
-### (2) SagaManager Slave
+### 2) SagaManager Slave
 
 | SagaId         | SvcName | TranSn | TranId         | TranSvcName | TranMethod | TranStatus | TranContent | Crdt                 | Updt                 |
 | -------------- | ------- | ------ | -------------- | ----------- | ---------- | ---------- | ----------- | -------------------- | -------------------- |
@@ -464,7 +464,7 @@ SagaManagerSlave : +Datetime Updt
 
 
 
-## 3) 보상사례 Data
+## 1.3 보상사례 Data
 
 - Master
 
