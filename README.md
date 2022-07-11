@@ -8,14 +8,17 @@
 
 
 
-- 몇가지 제약사항
-
-  - Orchestration 기반의 SAGA 로 설계함
-
-
-  - App과 App 사이의 호출관계는 동기방식(API Call)으로 고려한다.
-    - 비동기 방식의 Call 여부는 차후 결정
-
-
-
 # 1. 분석서 ( [가이드 문서 보기](./SagaDesign/saga_pattern.md) )  
+
+- Orchestration-Based Saga
+- Saga Pattern 설계
+  - 성공시나리오 (Sequence Diagram)
+  - 보상(실패) 시나리오(Sequence Diagram)
+- Saga Manager 설계
+  - ER
+  - Structure
+
+
+
+# 2. Source
+
