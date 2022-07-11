@@ -22,3 +22,67 @@
 
 # 2. Source
 
+- board
+- board2
+- board3
+
+
+
+
+
+
+
+# 8. KT Cloud Setup ( [가이드 문서 보기](./ktcloud-setup/ktcloud-setup.md) )  
+
+## 1) MariaDB on KT Cloud
+
+- MariaDB Primary / Secondary
+
+- phpmyadmin
+
+  
+
+  
+
+## 3) Redis on KT Cloud
+
+- helm install
+- Redis Cluster / Redis Install
+- P3X Redis UI
+- ACL
+- Java Sample
+
+
+
+
+
+# 9. 진행경과
+
+
+
+- [x] 분석서 작성
+
+  - [ ] Design
+
+- [ ] KTCloud
+
+  - [x] MariaDB Setting
+
+    - [x] MariaDB Setting
+
+    - [x] PhpAdmin 
+
+      http://phpmyadmin.song.ktcloud.211.254.212.105.nip.io/
+
+  - [x] Redis Setting
+
+    - [x] P3X Admin
+
+      
+
+- [ ] 개발
+
+  - [ ] MariaDB CRUD
+  - [ ] Redis CRUD
+
+
