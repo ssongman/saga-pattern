@@ -61,7 +61,7 @@ Orchestration-Based Saga 패턴은 트랜잭션 처리를 위해 Saga 인스턴�
 
 
 
-## 1.1 성공 시나리오
+## 2.1 성공 시나리오
 
 
 
@@ -228,7 +228,7 @@ sequenceDiagram
 
 
 
-## 1.2 보상  시나리오
+## 2.2 보상  시나리오
 
 
 
@@ -373,7 +373,7 @@ Saga Manager 는 일반 RDB(Mysql 등) 를 통해 관리한다.
 
 
 
-## 1.1 Saga Manager ER
+## 3.1 Saga Manager ER
 
 ```mermaid
 classDiagram
@@ -408,7 +408,7 @@ SagaManagerSlave : +Datetime Updt
 
 
 
-## 1.2 Structure
+## 3.2 Structure
 
 ### 1) SagaManager Master
 
@@ -464,7 +464,7 @@ SagaManagerSlave : +Datetime Updt
 
 
 
-## 1.3 보상사례 Data
+## 3.3 보상사례 Data
 
 - Master
 
