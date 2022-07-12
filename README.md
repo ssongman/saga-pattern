@@ -8,7 +8,7 @@
 
 
 
-# 1. 분석서 ( [가이드 문서 보기](./SagaDesign/saga_pattern.md) )  
+# 1. 분석서 ( [상세 내용 보기](./SagaDesign/saga_pattern.md) )  
 
 - Orchestration-Based Saga
 - Saga Pattern 설계
@@ -32,7 +32,7 @@
 
 
 
-# 8. KT Cloud Setup ( [가이드 문서 보기](./ktcloud-setup/ktcloud-setup.md) )  
+# 8. KT Cloud Setup ( [상세 내용 보기](./ktcloud-setup/ktcloud-setup.md) )  
 
 ## 1) MariaDB on KT Cloud
 
