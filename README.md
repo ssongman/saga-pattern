@@ -4,7 +4,7 @@
 
 
 
-본 분석 문서는 개발자들의 최소한의 개발시간 투자로 Saga Pattern 을 적용한 Framwork 을 개발하기 위함이다.
+본 분석 문서는 개발자들의 최소한의 개발시간 투자로 Saga Pattern 을 적용한 Framwork 을 개발하기 위함이다..
 
 
 
