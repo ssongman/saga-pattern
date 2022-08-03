@@ -69,7 +69,7 @@ curl -X POST -i localhost:8080/board/create \
     }'
 
 # 4) 삭제
-curl -X DELETE -i localhost:8080/board/2
+curl -X DELETE -i localhost:8080/board/3
 
 
 ```
