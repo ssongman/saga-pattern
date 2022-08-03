@@ -74,5 +74,15 @@ curl -X DELETE -i localhost:8080/board/3
 
 ```
 
-    
+
+
+# 5. db 확인
+```
+
+$ localhost:8080/h2-console
+jdbc:h2:mem:testdb
+root
+rootpass!
+
+```    
     
