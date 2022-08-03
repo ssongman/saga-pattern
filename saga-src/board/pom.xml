@@ -62,6 +62,22 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+			  <groupId>com.google.cloud.tools</groupId>
+			  <artifactId>jib-maven-plugin</artifactId>
+			  <version>3.2.1</version>
+			  <configuration>
+			    <from>
+			      <image>openjdk:11-jre</image>
+			    </from>
+			    <to>
+			      <image>docker.io/ssongman/board</image>
+			    </to>
+			  </configuration>
+			</plugin>
+			
+			
 		</plugins>
 	</build>
 

@@ -1,6 +1,40 @@
 
 
+# 1. jib build
 
+```sh
+$ mvn compile job:build
+
+```
+
+
+
+
+# 2. docker 로 실행
+
+```sh
+$ docker run -d --name board -p 8080:8080 ssongman/board
+
+
+```
+
+
+
+# 3. kubernetes 로 실행
+
+```sh
+$ kubectl -n song create board --image=ssongman/board
+
+
+```
+
+
+
+
+
+
+
+# 4. API 사용법
 
 ```sh
 
