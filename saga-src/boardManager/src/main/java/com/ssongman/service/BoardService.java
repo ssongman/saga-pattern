@@ -10,6 +10,10 @@ import com.ssongman.dto.Board;
 import com.ssongman.feign.Board2Feign;
 import com.ssongman.feign.BoardFeign;
 
+import lombok.extern.log4j.Log4j2;
+
+
+@Log4j2
 @Service
 public class BoardService {
 	
@@ -37,6 +41,7 @@ public class BoardService {
 	}
 	
 	public Board createBoard(Long boardId) {
+		log.info("[createBoard] createBoard job start");
 		Board board = Board.builder()
 				.title("title" + boardId.toString())
 				.content("content" + boardId.toString())
@@ -47,6 +52,8 @@ public class BoardService {
 
 		saveBoard1(board);
 		saveBoard2(board);
+		
+		log.info("[createBoard] createBoard job completed!!");
 		
 		return board;
 	}
@@ -59,7 +66,10 @@ public class BoardService {
 	
 	
 
+	
 	// [Access]-------------------------------------------------
+	
+	
 	public List<Board> getBoard1All() {
 		return boardFeign.getBoardList();
 	}

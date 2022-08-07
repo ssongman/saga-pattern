@@ -22,9 +22,9 @@
 
 # 2. Source
 
-- board
-- board2
-- board3
+- boardManager -  saga-src/boardManager
+- board Service1 - saga-src/board
+- board Service2 - saga-src/board
 
 
 
@@ -78,11 +78,38 @@
 
     - [x] P3X Admin
 
+      http://p3xredisui.redis-system.ktcloud.211.254.212.105.nip.io/
+      
       
 
 - [ ] 개발
 
-  - [ ] MariaDB CRUD
-  - [ ] Redis CRUD
+  - [ ] board Service
+    - [x] Local DB CRUD
+      - [x] MariaDB CRUD
+      - [x] H2 CRUD
+    - [x] Controller
+      - [x] GET/POST/DELETE
+      - [ ] Saga Transaction
+    - [x] build
+      - [x] jib build
+    - [ ] Saga Transaction
+      - [ ] DTO - Saga ID 등
+      - [ ] Rest Controller 
+      - [ ] DB transaction
+      - [ ] Redis Save
+  - [ ] boardManager
+    - [ ] board Service call
+      - [x] OpenFeign
+      - [ ] Kafka pub/sub
+    - [ ] Saga Transaction
+      - [ ] Saga Start
+        - [ ] Redis Save
+      - [ ] Saga Process
+        - [ ] DTO - Saga ID 등
+        - [ ] Rest Controller
+      - [ ] Saga End
+        - [ ] Redis Save
+
 
 
