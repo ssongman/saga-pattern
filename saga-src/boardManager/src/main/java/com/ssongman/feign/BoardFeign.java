@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.ssongman.dto.Board;
+import com.ssongman.saga.SagaManagerETT;
 
 
 @FeignClient(name = "board", url = "http://localhost:8081")
@@ -19,7 +20,7 @@ public interface BoardFeign {
 	Board findByBoardID(@PathVariable("id") Long boardId);
 	
 	@PostMapping("/board/create")
-	Board saveBoard(@RequestBody Board board);
+	String saveBoard(@RequestBody Board board);
 	
 	@DeleteMapping("/board/{id}")
 	void deleteBoardById(@PathVariable("id") Long boardId);

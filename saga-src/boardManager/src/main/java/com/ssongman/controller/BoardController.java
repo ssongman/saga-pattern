@@ -32,8 +32,8 @@ public class BoardController {
 	
 	@GetMapping("/get/{id}")
 	public String getBoardById(@PathVariable("id") Long Id) {
-		Board board1 = boardService.getBoard1(Id);
-		Board board2 = boardService.getBoard2(Id);
+		Board board1 = boardService.callGetBoard1(Id);
+		Board board2 = boardService.callGetBoard2(Id);
 		
 		return board1.getTitle() + " / " + board2.getTitle();
 		

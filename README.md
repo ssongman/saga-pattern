@@ -85,29 +85,47 @@
 - [ ] 개발
 
   - [ ] board Service
+  
     - [x] Local DB CRUD
+  
       - [x] MariaDB CRUD
       - [x] H2 CRUD
+  
     - [x] Controller
+  
       - [x] GET/POST/DELETE
       - [ ] Saga Transaction
+  
     - [x] build
+  
       - [x] jib build
-    - [ ] Saga Transaction
-      - [ ] DTO - Saga ID 등
-      - [ ] Rest Controller 
-      - [ ] DB transaction
-      - [ ] Redis Save
+  
+    - [x] Saga Transaction
+  
+      - [x] Rest Controller
+  
+        - [x] DTO  표준정의
+  
+          Saga ID 를 함께 받아서 처리되도록
+  
+      - [x] DB transaction
+  
+      - [x] Redis Save
+  
+      - [ ] 보상처리
+  
   - [ ] boardManager
+  
     - [ ] board Service call
       - [x] OpenFeign
       - [ ] Kafka pub/sub
     - [ ] Saga Transaction
-      - [ ] Saga Start
-        - [ ] Redis Save
-      - [ ] Saga Process
-        - [ ] DTO - Saga ID 등
+      - [x] Saga Start
+        - [x] Redis Save
+      - [x] Saga Process
+        - [x] DTO - Saga ID 등
         - [ ] Rest Controller
+      - [ ] 보상처리 관리
       - [ ] Saga End
         - [ ] Redis Save
 

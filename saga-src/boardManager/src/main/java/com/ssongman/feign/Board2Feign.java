@@ -19,7 +19,7 @@ public interface Board2Feign {
 	Board findByBoardID(@PathVariable("id") Long boardId);
 	
 	@PostMapping("/board/create")
-	Board saveBoard(@RequestBody Board board);
+	String saveBoard(@RequestBody Board board);
 	
 	@DeleteMapping("/board/{id}")
 	void deleteBoardById(@PathVariable("id") Long boardId);

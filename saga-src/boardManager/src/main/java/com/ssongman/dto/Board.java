@@ -34,5 +34,7 @@ public class Board {
         this.hits = hits;
         this.deleteYn = deleteYn;
     }
+    
+    
 
 }

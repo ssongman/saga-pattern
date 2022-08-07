@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ssongman.board.entity.Board;
 import com.ssongman.board.entity.BoardRepository;
 
+
 @Service
 public class BoardService {
 

@@ -5,8 +5,8 @@
 ```sh
 $ mvn compile jib:build
 
-# docker daemon 으로 build
-$ mvn compile jib:dockerbuild
+# docker daemon 으로 build - m2 cache 만 받으면 30초 소요
+$ mvn compile jib:dockerBuild
 
 
 ```
@@ -30,7 +30,7 @@ $ docker pull docker.io/ssongman/board
 
 ```sh
 $ docker rm -f board
-$ docker run -d --name board -p 8081:8080 docker.io/ssongman/board
+$ docker run -d --name board -p 8081:8081 docker.io/ssongman/board
 
 # 1) 조회
 curl -i localhost:8081/board/list
@@ -47,7 +47,7 @@ curl -i localhost:8081/board/1
 
 ```sh
 $ docker rm -f board2
-$ docker run -d --name board2 -p 8082:8080 docker.io/ssongman/board
+$ docker run -d --name board2 -p 8082:8081 docker.io/ssongman/board
 
 # 1) 조회
 curl -i localhost:8082/board/list
@@ -95,7 +95,7 @@ $ kubectl -n song create board --image=ssongman/board
 curl -i localhost:8081/board/list
 
 # 2) 조회: 특정 index 조회
-curl -i localhost:8081/board/2
+curl -i localhost:8081/board/1
 
 # 3) 생성
 curl -X POST -i localhost:8081/board/create \
