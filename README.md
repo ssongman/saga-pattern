@@ -1,4 +1,4 @@
-# Saga Pattern 분석
+# Saga Pattern 분석(진행중)
 
 > 프로젝트에서 쉽게 적용 가능한 Saga Pattern Framwork 개발을 위한 분석
 
@@ -22,9 +22,9 @@
 
 # 2. Source
 
-- board
-- board2
-- board3
+- boardManager -  saga-src/boardManager
+- board Service1 - saga-src/board
+- board Service2 - saga-src/board
 
 
 
@@ -78,11 +78,56 @@
 
     - [x] P3X Admin
 
+      http://p3xredisui.redis-system.ktcloud.211.254.212.105.nip.io/
+      
       
 
 - [ ] 개발
 
-  - [ ] MariaDB CRUD
-  - [ ] Redis CRUD
+  - [ ] board Service
+  
+    - [x] Local DB CRUD
+  
+      - [x] MariaDB CRUD
+      - [x] H2 CRUD
+  
+    - [x] Controller
+  
+      - [x] GET/POST/DELETE
+      - [ ] Saga Transaction
+  
+    - [x] build
+  
+      - [x] jib build
+  
+    - [x] Saga Transaction
+  
+      - [x] Rest Controller
+  
+        - [x] DTO  표준정의
+  
+          Saga ID 를 함께 받아서 처리되도록
+  
+      - [x] DB transaction
+  
+      - [x] Redis Save
+  
+      - [ ] 보상처리
+  
+  - [ ] boardManager
+  
+    - [ ] board Service call
+      - [x] OpenFeign
+      - [ ] Kafka pub/sub
+    - [ ] Saga Transaction
+      - [x] Saga Start
+        - [x] Redis Save
+      - [x] Saga Process
+        - [x] DTO - Saga ID 등
+        - [ ] Rest Controller
+      - [ ] 보상처리 관리
+      - [ ] Saga End
+        - [ ] Redis Save
+
 
 
